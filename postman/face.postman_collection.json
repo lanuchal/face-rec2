@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "dd1542aa-3dac-45e7-a5a3-10d84391c012",
+		"name": "face",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13311556"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/anucha/Downloads/S__37658648.jpg"
+						},
+						{
+							"key": "user_id",
+							"value": "kanoon2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5023/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5023",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ลบ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "anucha",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5023/api/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5023",
+					"path": [
+						"api",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "train",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "anucha",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5023/train",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5023",
+					"path": [
+						"train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\" : true,\r\n    \"data\":[\r\n        {\r\n            \"filename\": \"anucha_0.jpg\"\r\n        }\r\n    ],\r\n    \"message\": \"File uploaded successfully\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5023/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5023",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-one",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "kl",
+						"value": "lk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\" : true,\r\n    \"data\":[\r\n        {\r\n            \"filename\": \"anucha_0.jpg\"\r\n        }\r\n    ],\r\n    \"message\": \"File uploaded successfully\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5023/user/kanoon",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5023",
+					"path": [
+						"user",
+						"kanoon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/anucha/Desktop/produtions/face-rec/train_data/kao_1.jpg",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "anucha",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "date_time",
+							"value": "asdasdasd",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5023/user/kanoon",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5023",
+					"path": [
+						"user",
+						"kanoon"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
